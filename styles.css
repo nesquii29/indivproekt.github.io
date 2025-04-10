@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff5f5;
+    color: #5b0a0a;
+  }
+  
+  .site-header {
+    background: #b30000;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #7a0000;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .navbar button {
+    background: white;
+    color: #7a0000;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar button:hover {
+    background: #ffcccc;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  .content-section {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .content-section.active {
+    display: block;
+  }
+  
+  .gallery {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .gallery img {
+    width: 30%;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .site-footer {
+    background-color: #b30000;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
+  /* Модальное окно */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 2rem;
+    width: 60%;
+    border-radius: 1rem;
+    position: relative;
+    color: #5b0a0a;
+  }
+  
+  .close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0 1rem;
+    border-radius: 0.3rem;
+    border: 1px solid #ccc;
+  }
+  
+  form button {
+    background-color: #b30000;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  
+  #feedback-list {
+    margin-top: 1rem;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
