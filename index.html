@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Прогулки по Новочеркасску</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Прогулки по Новочеркасску</h1>
+    <p>Туристический гид и личный блог о родном городе</p>
+  </header>
+
+  <nav class="navbar">
+    <button onclick="showSection('about')">О городе</button>
+    <button onclick="showSection('places')">Интересные места</button>
+    <button onclick="showSection('gallery')">Галерея</button>
+    <button onclick="showSection('feedback')">Отзывы</button>
+  </nav>
+
+  <main>
+    <section id="about" class="content-section active">
+      <h2>О городе Новочеркасск</h2>
+      <p>
+        Новочеркасск — столица Донского казачества, город с богатой историей и яркой культурой.
+        Основан в 1805 году как новая столица Войска Донского. Город славится своим Вознесенским собором —
+        одним из крупнейших в России, множеством казачьих памятников, музеями и уютной атмосферой.
+      </p>
+      <p>
+        Здесь пересекаются традиции казачества и современность, а жители гордятся своим наследием.
+        В Новочеркасске регулярно проходят культурные мероприятия, парады, праздники, посвящённые
+        казачьим традициям.
+      </p>
+    </section>
+
+    <section id="places" class="content-section">
+      <h2>Интересные места</h2>
+      <ul>
+        <li><strong>Вознесенский собор</strong> — символ города и место казачьих церемоний.</li>
+        <li><strong>Платовский проспект</strong> — главная улица, идеальна для прогулок.</li>
+        <li><strong>Памятник Ермаку</strong> — одна из первых скульптур в честь казака-первопроходца.</li>
+        <li><strong>Казачий театр</strong> — культурный центр с уникальными постановками.</li>
+        <li><strong>Музей истории Донского казачества</strong> — погружение в быт и дух казаков.</li>
+      </ul>
+      <button onclick="showModal()">Узнать больше</button>
+    </section>
+
+    <section id="gallery" class="content-section">
+      <h2>Галерея</h2>
+      <div class="gallery">
+        <img src="image/Вознесенский_собор_Новочеркасск7.jpg" alt="Собор">
+        <img src="image/Cossacks_museum.jfif" alt="Музей">
+        <img src="image/o.8725-DJI_0019lr.jpg" alt="Улица">
+      </div>
+    </section>
+
+    <section id="feedback" class="content-section">
+      <h2>Оставьте отзыв</h2>
+      <form onsubmit="return submitFeedback(event)">
+        <label for="name">Имя:</label><br>
+        <input type="text" id="name" required><br>
+        <label for="comment">Комментарий:</label><br>
+        <textarea id="comment" rows="4" required></textarea><br>
+        <button type="submit">Отправить</button>
+      </form>
+      <div id="feedback-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © 2025 Прогулки по Новочеркасску. Сайт создан с помощью нейросети.
+  </footer>
+
+  <!-- Модальное окно -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="hideModal()">&times;</span>
+      <h3>Подробности</h3>
+      <p>Новочеркасск — не только исторический, но и студенческий город, здесь находится Южно-Российский политехнический университет (НПИ). Атмосфера уюта и интеллигентности делает его идеальным для жизни и учёбы.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
